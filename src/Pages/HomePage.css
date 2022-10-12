@@ -1,0 +1,17 @@
+.Homepage__logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+.Homepage__link {
+    color: #61dafb;
+}
+
+@keyframes Homepage__logo--spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,42 @@
+.login[open] {
+    max-width: 30rem;
+    padding: 0;
+
+    display: grid;
+    grid-template-rows: 60px auto 75px;
+    place-items: center;
+}
+
+.login::backdrop {
+    background-color: hsla(0, 100%, 0%, 0.75);
+}
+
+.modal__main {
+    padding: 1rem;
+}
+
+.modal__close {
+    place-self: center;
+    background-color: unset;
+    border: none;
+    cursor: pointer;
+}
+
+.modal__close::after {
+    content: 'X';
+    font-size: x-large;
+}
+
+.modal__title {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 50px;
+    border-bottom: 1px solid grey;
+}
+
+.modal__title > h1 {
+    margin: 0;
+    padding-left: 1rem;
+    font-size: larger;
+    font-weight: normal;
+}

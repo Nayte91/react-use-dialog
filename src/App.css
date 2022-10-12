@@ -1,0 +1,21 @@
+.App {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 70px 1fr 50px;
+    text-align: center;
+}
+
+.App__main {
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.App__footer {
+    background-color: black;
+    color: white;
+    display: grid;
+    place-items: center;
+}
