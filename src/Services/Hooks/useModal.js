@@ -1,15 +1,15 @@
-import { useState } from 'react'
+const useModal = ({ content }) => {
+    const openModal = () => {
+        console.log('open modal !' + content)
+    }
 
-const useModal = () => {
-    const [isShowing, setIsShowing] = useState(false)
-
-    function toggle() {
-        setIsShowing(!isShowing)
+    const closeModal = () => {
+        console.log('close modal!')
     }
 
     return {
-        isShowing,
-        toggle,
+        openModal,
+        closeModal,
     }
 }
 
