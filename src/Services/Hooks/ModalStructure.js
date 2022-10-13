@@ -2,7 +2,7 @@ import React, { forwardRef, useState } from 'react'
 import ReactDOM from 'react-dom'
 
 const ModalStructure = forwardRef(
-    ({ children, header = true, anchor = null }, ref) => {
+    ({ title, children, header = true, anchor = null }, ref) => {
         const [isShowing, setIsShowing] = useState(true)
         const closeDialog = () => ref.current.close()
 
@@ -20,6 +20,7 @@ const ModalStructure = forwardRef(
                             >
                                 <span>&times;</span>
                             </button>
+                            <h1>{title}</h1>
                         </header>
                     )}
                     <main className="modal__main">{children}</main>
