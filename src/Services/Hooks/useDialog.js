@@ -1,21 +1,24 @@
 import { createRef } from 'react'
-import { render } from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import ModalStructure from './ModalStructure'
 
 const useDialog = (title, content) => {
     const ref = createRef()
-    const openDialog = () => {
-        render(
+
+    const openDialog = async () => {
+        let dialogsNode = createRoot(document.getElementById('dialogs'))
+        
+        await dialogsNode.render(
             <ModalStructure ref={ref} title={title}>
                 {content}
-            </ModalStructure>,
-            document.getElementById('toto')
+            </ModalStructure>
         )
+
         ref.current.showModal()
     }
 
     return {
-        openDialog,
+        openDialog
     }
 }
 

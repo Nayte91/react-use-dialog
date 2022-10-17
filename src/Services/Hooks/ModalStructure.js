@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom'
 
 const ModalStructure = forwardRef(
     ({ title, children, header = true, anchor = null }, ref) => {
-        const closeDialog = () => ref.current.close()
+        const closeDialog = async () => {
+            await ref.current.close()
+            
+            document.getElementById('dialogs').removeChild(ref.current)
+        }
 
         return ReactDOM.createPortal(
             <dialog className="modal" ref={ref}>
